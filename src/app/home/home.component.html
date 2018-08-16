@@ -1,0 +1,24 @@
+<mat-card class="ag-workshop-home-card-size">
+  <mat-card-content>
+  	<div style="text-align:center">
+	  	<h1>WORLD'S ORIGINAL ANGULAR CONFERENCE</h1>
+    	<h3>April 18 to 20th 2018, Chennai</h3>
+	</div>
+  </mat-card-content>
+  
+  <mat-card-actions>
+  	<div style="text-align:center">
+	  	<button mat-raised-button color="primary" routerLink="/sessions">SESSIONS</button>
+	    <button mat-raised-button color="primary" (click)="onRegister()">REGISTER</button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+<br><br>
+<mat-card class="ag-workshop-home-card-size">
+  <mat-card-content>
+	<div style="text-align:center;">
+	  	<h1>{{ today | date:'HH' }}&nbsp;&nbsp;&nbsp;&nbsp;{{ today | date:'mm' }}&nbsp;&nbsp;&nbsp;&nbsp;{{ today | date:'ss' }}</h1>
+	  	<h3>Hrs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Secs</h3>
+	 </div>
+  </mat-card-content>
+</mat-card>

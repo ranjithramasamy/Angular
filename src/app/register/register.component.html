@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Register</h1>
+<div mat-dialog-content>
+  <mat-form-field class="ag-workshop-full-width">
+    <input matInput placeholder="Name" [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field class="ag-workshop-full-width">
+    <input matInput placeholder="Mobile No" [(ngModel)]="data.mobileNo">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()" cdkFocusInitial>Cancel</button>
+  <button mat-raised-button color="primary">Register</button>
+</div>

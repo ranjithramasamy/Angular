@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Angular Workshop</span>
+    <span class="ag-workshop-spacer"></span>
+
+    <button mat-button routerLink="/home">Home</button>
+    <button mat-button routerLink="/schedule">Schedule</button>
+    <button mat-button routerLink="/sessions">Sessions</button>
+    <button mat-button routerLink="/speakers">Speakers</button>
+    <button mat-button (click)="openDialog()">Register</button>
+  </mat-toolbar-row>
+</mat-toolbar><br>
+
+<router-outlet></router-outlet>

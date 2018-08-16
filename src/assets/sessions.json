@@ -1,0 +1,38 @@
+[
+  {
+    "eventTitle": "Authentication with NgRx",
+    "location": "Chennai",
+    "speaker": "Ranjith",
+    "date": "02/18/2018"
+  },
+  {
+    "eventTitle": "Modules are not what you think they are",
+    "location": "Bangalore",
+    "speaker": "Pranav",
+    "date": "02/19/2018"
+  },
+  {
+    "eventTitle": "Angular Service Workers & Cows — a love story",
+    "location": "Pune",
+    "speaker": "Andrew",
+    "date": "02/20/2018"
+  },
+  {
+    "eventTitle": "Ready for Readable Code?",
+    "location": "Chennai",
+    "speaker": "Ranjith",
+    "date": "02/19/2018"
+  },
+  {
+    "eventTitle": "Reusable Animations",
+    "location": "Bangalore",
+    "speaker": "Pranav & Vijay",
+    "date": "02/19/2018"
+  },
+  {
+    "eventTitle": "Angular Service Workers",
+    "location": "Pune",
+    "speaker": "Willson & Mat",
+    "date": "02/20/2018"
+  }
+]

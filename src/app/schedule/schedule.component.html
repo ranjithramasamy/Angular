@@ -1,0 +1,18 @@
+<div style="text-align:center">
+	<mat-form-field>
+	  <mat-select placeholder="Filter By">
+	    <mat-option *ngFor="let filter of filters" [value]="filter">
+	      {{ filter }}
+	    </mat-option>
+	  </mat-select>
+	</mat-form-field>
+</div>
+<div *ngFor="let schedule of schedulesList" class="ag-workshop-home-card-size">
+<mat-card>
+  <mat-card-content>
+	<h2>{{ schedule.date }}</h2>
+	<div *ngFor="let topic of schedule.topics"> <h3>{{ topic.title }}</h3><h5>Presented by: {{ topic.handleBy }}</h5></div>
+  </mat-card-content>
+</mat-card>
+<br>
+</div>

@@ -1,0 +1,11 @@
+.ag-workshop-spacer {
+  flex: 1 1 auto;
+}
+
+.ag-workshop-full-width {
+  width: 100%;
+}
+
+.ag-workshop-home-card-size {
+  max-width: 400px;
+}

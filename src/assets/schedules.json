@@ -1,0 +1,49 @@
+[
+  {
+    "date": "02/18/2018",
+    "topics": [
+      {
+        "title": "The Ultimate Angular 2 Workshop",
+        "handleBy": "John Papa & Dan Wahlin"
+      },
+      {
+        "title": "Ultimate Workshop – NGRX",
+        "handleBy": "Joe Eames"
+      },
+      {
+        "title": "Migrating applications from Angular 1 to 2",
+        "handleBy": "Ben Lesh & Tracy Lee"
+      }
+    ]
+  },
+  {
+    "date": "02/19/2018",
+    "topics": [
+      {
+        "title": "Taking Angular to Production",
+        "handleBy": "John Papa & Dan Wahlin"
+      },
+      {
+        "title": "Unit Testing Angular like a Boss",
+        "handleBy": "Joe Eames"
+      },
+      {
+        "title": "Webpack Academy: From Beginner to Master",
+        "handleBy": "Sean Larkin"
+      }
+    ]
+  },
+  {
+    "date": "02/20/2018",
+    "topics": [
+      {
+        "title": "Game Night & Sponsor Parties",
+        "handleBy": ""
+      },
+      {
+        "title": "Fair Day Workshops & Talks",
+        "handleBy": ""
+      }
+    ]
+  }
+]
