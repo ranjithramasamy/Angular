@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AppComponentMainService } 	from './app.component.service';
+import { AppComponentMainService } from './app.component.service';
 
 @Component({
   selector: 'app-root',

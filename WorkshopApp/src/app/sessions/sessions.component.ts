@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { AppComponentMainService } 	from '../app.component.service';
+import {AppComponentMainService} from '../app.component.service';
 
 @Component({
   selector: 'sessions',
@@ -9,16 +9,18 @@ import { AppComponentMainService } 	from '../app.component.service';
 
 export class SessionsComponent {
   public sessionsList = [];
-  public filters = ["Location", "Date", "Speaker"];
+  public filters = ['Location', 'Date', 'Speaker'];
 
-  constructor(private _appSvc: AppComponentMainService) { }
+  constructor(private _appSvc: AppComponentMainService) {
+  }
 
   ngOnInit() {
-	  this._appSvc.getSessionsList()
-	  	.subscribe(response => this.sessionsResponseHandler(response));
+    this._appSvc.getSessionsList()
+      .subscribe(response => this.sessionsResponseHandler(response));
   }
 
-  sessionsResponseHandler(response){
-	  this.sessionsList = response;
+  sessionsResponseHandler(response) {
+    this.sessionsList = response;
   }
 }
+

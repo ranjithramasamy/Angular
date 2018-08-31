@@ -1,6 +1,6 @@
 export interface ISessions {
-	eventTitle: string;
-	location: string;
-	speaker: string;
-	date: string;
+  eventTitle: string;
+  location: string;
+  speaker: string;
+  date: string;
 }

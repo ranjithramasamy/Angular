@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { AppComponentMainService } 	from '../app.component.service';
+import {AppComponentMainService} from '../app.component.service';
 
 @Component({
   selector: 'schedule',
@@ -8,17 +8,18 @@ import { AppComponentMainService } 	from '../app.component.service';
 })
 
 export class ScheduleComponent {
-	 public schedulesList = [];
-	 public filters = ["Location", "Date", "Speaker"];
+  public schedulesList = [];
+  public filters = ['Location', 'Date', 'Speaker'];
 
-	 constructor(private _appSvc: AppComponentMainService) { }
+  constructor(private _appSvc: AppComponentMainService) {
+  }
 
-	 ngOnInit() {
-		 this._appSvc.getScheculesList()
-		  	.subscribe(response => this.scheduleResponseHandler(response));
-	 }
+  ngOnInit() {
+    this._appSvc.getScheculesList()
+      .subscribe(response => this.scheduleResponseHandler(response));
+  }
 
-	 scheduleResponseHandler(response){
-		 this.schedulesList = response;
-	 }
+  scheduleResponseHandler(response) {
+    this.schedulesList = response;
+  }
 }

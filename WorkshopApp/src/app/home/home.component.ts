@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { Subscription, timer } from "rxjs";
+import {Subscription, timer} from 'rxjs';
 
-import { AppComponentMainService } 	from '../app.component.service';
+import {AppComponentMainService} from '../app.component.service';
 
 @Component({
   selector: 'home',
@@ -14,22 +14,23 @@ export class HomeComponent {
   private today: number = Date.now();
   private subscription: Subscription;
 
-  constructor(private _appSvc: AppComponentMainService) { }
+  constructor(private _appSvc: AppComponentMainService) {
+  }
 
   ngOnInit() {
-	  const timerObj = timer(0, 1000);
-	  this.subscription = timerObj.subscribe(t => this.onTimerHandler(t));
+    const timerObj = timer(0, 1000);
+    this.subscription = timerObj.subscribe(t => this.onTimerHandler(t));
   }
 
-  onTimerHandler(counter){
-	  this.today = Date.now();
+  onTimerHandler(counter) {
+    this.today = Date.now();
   }
 
-  onRegister(){
-	  this._appSvc.openRegisterDialog();
+  onRegister() {
+    this._appSvc.openRegisterDialog();
   }
 
   ngOnDestroy() {
-	  this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 }

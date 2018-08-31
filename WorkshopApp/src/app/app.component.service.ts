@@ -1,44 +1,50 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { MatDialog, MatDialogConfig } from '@angular/material';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {MatDialog, MatDialogConfig} from '@angular/material';
 
-import { RegisterComponent }     from './register/register.component';
+import {RegisterComponent} from './register/register.component';
+import {environment} from '../environments/environment';
 
-import { ISessions } from './sessions/sessions';
-import { ISchedules } from './schedule/schedules';
-import { ISpeakers } from './speakers/speakers';
+import {ISessions} from './sessions/sessions';
+import {ISchedules} from './schedule/schedules';
+import {ISpeakers} from './speakers/speakers';
 
 @Injectable()
 export class AppComponentMainService {
-	private _sessionUrl: string = '/assets/sessions.json';
-	private _scheduleUrl: string = '/assets/schedules.json';
-	private _speakerUrl: string = '/assets/speakers.json';
+  private _sessionUrl: string = environment.apiBaseUrl + '/workshop/sessions';
+  private _scheduleUrl: string = environment.apiBaseUrl + '/workshop/schedules';
+  private _speakerUrl: string = environment.apiBaseUrl + '/workshop/speakers';
 
-	constructor(private http: HttpClient, public dialog: MatDialog) { };
+  /*private _sessionUrl: string = '/assets/sessions.json';
+   private _scheduleUrl: string = '/assets/schedules.json';
+   private _speakerUrl: string = '/assets/speakers.json';*/
 
-	getSessionsList(): Observable<ISessions[]> {
-		return this.http.get<ISessions[]>(this._sessionUrl);
-	}
+  constructor(private http: HttpClient, public dialog: MatDialog) {
+  }
 
-	getScheculesList(): Observable<ISchedules[]> {
-		return this.http.get<ISchedules[]>(this._scheduleUrl);
-	}
+  getSessionsList(): Observable<ISessions[]> {
+    return this.http.get<ISessions[]>(this._sessionUrl);
+  }
 
-	getSpeakersList(): Observable<ISpeakers[]> {
-		return this.http.get<ISpeakers[]>(this._speakerUrl);
-	}
+  getScheculesList(): Observable<ISchedules[]> {
+    return this.http.get<ISchedules[]>(this._scheduleUrl);
+  }
 
-	openRegisterDialog(): void {
-	  const dialogConfig = new MatDialogConfig();
+  getSpeakersList(): Observable<ISpeakers[]> {
+    return this.http.get<ISpeakers[]>(this._speakerUrl);
+  }
+
+  openRegisterDialog(): void {
+    const dialogConfig = new MatDialogConfig();
 
     dialogConfig.width = '550px';
-    dialogConfig.data = { name: 'Ranjith', mobileNo: '9944269473' };
+    dialogConfig.data = {name: 'Ranjith', mobileNo: '9944269473'};
 
-		let dialogRef = this.dialog.open(RegisterComponent, dialogConfig);
+    const dialogRef = this.dialog.open(RegisterComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed!');
     });
-	}
+  }
 }

@@ -1,5 +1,5 @@
-import { Component, Inject } 				from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } 	from '@angular/material';
+import {Component, Inject} from '@angular/core';
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'register',
@@ -7,9 +7,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } 	from '@angular/material';
 })
 
 export class RegisterComponent {
-  constructor(public dialogRef: MatDialogRef<RegisterComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
-  
-  onCancelClick(){
-	  this.dialogRef.close();
+  constructor(public dialogRef: MatDialogRef<RegisterComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
+  }
+
+  onCancelClick() {
+    this.dialogRef.close();
   }
 }
