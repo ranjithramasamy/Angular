@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, Input} from '@angular/core';
 import { InitializerService } from '../initializer.service';
 import { LoggerService } from '../logger.service';
 
@@ -9,12 +9,43 @@ import { LoggerService } from '../logger.service';
   providers: [InitializerService, LoggerService]
 })
 export class ChildOneComponent implements OnInit {
+  @Input() childOneInput: string;
+
   currValue: string;
 
   constructor(private initSvc: InitializerService, private loggerSvc: LoggerService) { }
 
+  ngOnChanges() {
+    console.log("ChildOneComponent :: ngOnChanges()");
+  }
+
   ngOnInit() {
+    console.log("ChildOneComponent :: ngOnInit()");
     this.initSvc.setCurrentValue("child-one");
+  }
+
+  ngDoCheck() {
+    console.log("ChildOneComponent :: ngDoCheck()");
+  }
+
+  ngAfterContentInit() {
+    console.log("ChildOneComponent :: ngAfterContentInit()");
+  }
+
+  ngAfterContentChecked() {
+    console.log("ChildOneComponent :: ngAfterContentChecked()");
+  }
+
+  ngAfterViewInit() {
+    console.log("ChildOneComponent :: ngAfterViewInit()");
+  }
+
+  ngAfterViewChecked() {
+    console.log("ChildOneComponent :: ngAfterViewChecked()");
+  }
+
+  ngOnDestroy() {
+    console.log("ChildOneComponent :: ngOnDestroy()");
   }
 
   printCurrentValue() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { InitializerService } from '../initializer.service';
 
 @Component({
@@ -12,8 +12,37 @@ export class ChildTwoComponent implements OnInit {
 
   constructor(private initSvc: InitializerService) { }
 
+  ngOnChanges() {
+    console.log("ChildTwoComponent :: ngOnChanges()");
+  }
+
   ngOnInit() {
+    console.log("ChildTwoComponent :: ngOnInit()");
     this.initSvc.setCurrentValue("child-two");
+  }
+
+  ngDoCheck() {
+    console.log("ChildTwoComponent :: ngDoCheck()");
+  }
+
+  ngAfterContentInit() {
+    console.log("ChildTwoComponent :: ngAfterContentInit()");
+  }
+
+  ngAfterContentChecked() {
+    console.log("ChildTwoComponent :: ngAfterContentChecked()");
+  }
+
+  ngAfterViewInit() {
+    console.log("ChildTwoComponent :: ngAfterViewInit()");
+  }
+
+  ngAfterViewChecked() {
+    console.log("ChildTwoComponent :: ngAfterViewChecked()");
+  }
+
+  ngOnDestroy() {
+    console.log("ChildTwoComponent :: ngOnDestroy()");
   }
 
   printCurrentValue() {
